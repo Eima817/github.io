@@ -599,3 +599,67 @@ section#services::before,
 .about-shapes .shape-dot {
   animation: float-small-dot 6s ease-in-out infinite;
 }
+
+/* ================================
+   Sėkmingo pateikimo pop-up pranešimas
+   ================================ */
+
+.popup-success {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  background: #16a34a;
+  color: #f9fafb;
+  padding: 0.9rem 1.3rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  font-size: 0.95rem;
+  display: none;
+  max-width: 320px;
+}
+
+.popup-success.show {
+  display: block;
+  animation: popup-fade 0.35s ease-out;
+}
+
+@keyframes popup-fade {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* jei vartotojas prašo reduced motion – be animacijos */
+@media (prefers-reduced-motion: reduce) {
+  .popup-success.show {
+    animation: none;
+  }
+}
+
+/* Kontaktų formos klaidų stiliai */
+
+.php-email-form .is-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.4);
+}
+
+.field-error {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #fecaca;
+}
+
+/* Neaktyvus Submit mygtukas */
+
+.php-email-form button[disabled],
+.php-email-form .btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

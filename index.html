@@ -945,33 +945,80 @@
             <form action="forms/contact.php" method="post" class="php-email-form">
               <div class="row gy-4">
 
+                <!-- Vardas -->
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="first_name" class="form-control" placeholder="Vardas" required>
                 </div>
 
+                <!-- Pavardė -->
                 <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="text" name="last_name" class="form-control" placeholder="Pavardė" required>
+                </div>
+
+                <!-- El. paštas -->
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="El. paštas" required>
+                </div>
+
+                <!-- Telefonas -->
+                <div class="col-md-6">
+                  <input type="tel" name="phone" class="form-control" placeholder="Telefono numeris" required>
+                </div>
+
+                <!-- Adresas -->
+                <div class="col-md-12">
+                  <input type="text" name="address" class="form-control" placeholder="Adresas" required>
+                </div>
+
+                <!-- Vertinimo klausimai (1–10) – slideriai -->
+
+                <div class="col-md-12">
+                  <label for="rating_communication" class="form-label">
+                    Kaip vertinate mano komunikaciją? (1–10)
+                  </label>
+                  <input type="range"
+                        class="form-range"
+                        id="rating_communication"
+                        name="rating_communication"
+                        min="1" max="10" value="7">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <label for="rating_skills" class="form-label">
+                    Kaip vertinate technines žinias? (1–10)
+                  </label>
+                  <input type="range"
+                        class="form-range"
+                        id="rating_skills"
+                        name="rating_skills"
+                        min="1" max="10" value="8">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <label for="rating_reliability" class="form-label">
+                    Kaip vertinate patikimumą ir atsakomybę? (1–10)
+                  </label>
+                  <input type="range"
+                        class="form-range"
+                        id="rating_reliability"
+                        name="rating_reliability"
+                        min="1" max="10" value="8">
                 </div>
+
+                <!-- Submit + status blokai paliekam kaip šablone -->
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Submit</button>
                 </div>
 
               </div>
             </form>
           </div>
+
 
         </div>
 
@@ -1064,6 +1111,10 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
 
 </body>
 

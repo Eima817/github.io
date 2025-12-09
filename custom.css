@@ -1,0 +1,601 @@
+/* Bendras akcentas, naudojamas visur */
+:root {
+  --accent-color: #1f1199;
+}
+
+
+/* 2a. Nauja šriftų šeima visam puslapiui */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+/* 2b. Antraštės – kiti šriftai / dydžiai / spalvos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6em;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: var(--accent-color);
+}
+
+h2 {
+  font-size: 2.1rem;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #ffeaa7;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #dfe6e9;
+}
+
+h5 {
+  font-size: 1.3rem;
+  color: #b2bec3;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 1.1rem;
+  color: #636e72;
+  font-weight: 600;
+}
+
+/* 2c. Pataisytas paragrafų stilius – kad skirtųsi nuo šablono */
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.015em;
+  color: #f5f6fa;
+  margin-bottom: 1.1rem;
+}
+
+
+/* Bendras stilius mygtukams */
+.btn-getstarted,
+.btn-primary,
+.btn-secondary,
+button,
+a.btn {
+  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent-color);
+  background: transparent;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* :hover būsena */
+.btn-getstarted:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+button:hover,
+a.btn:hover {
+  background: var(--accent-color);
+  color: #3a9b57;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 184, 148, 0.4);
+}
+
+/* :active būsena */
+.btn-getstarted:active,
+.btn-primary:active,
+.btn-secondary:active,
+button:active,
+a.btn:active {
+  transform: translateY(0);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.35);
+  background: #009170;
+  color: #ffffff;
+}
+
+/* Nuorodos */
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  color: #c41f1f;
+  text-decoration-color: #ca1515;
+}
+
+a:active {
+  color: #00cec9;
+}
+
+
+/* Vienodas vertikalus tarpas šioms sekcijoms */
+.about.section,
+.resume.section,
+.portfolio.section,
+.services.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Vienodas tarpas po sekcijos antrašte */
+.about .section-title,
+.resume .section-title,
+.portfolio .section-title,
+.services .section-title {
+  padding-bottom: 40px;
+}
+
+/* Kortelės – rėmeliai, radius, šešėliai */
+.profile-card,
+.services .service-item,
+.experience-cards .exp-card,
+.portfolio .portfolio-card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+/* Daugiau vidaus tarpo kortelėse */
+.services .service-item,
+.experience-cards .exp-card,
+.portfolio .portfolio-card {
+  padding: 1.8rem;
+}
+
+/* Vienodas tarpas tarp kolonų blokų */
+.about .row.gy-5 > [class*="col-"],
+.resume .row.gy-5 > [class*="col-"],
+.portfolio .row.gy-4 > [class*="col-"],
+.services .row.gy-4 > [class*="col-"] {
+  margin-bottom: 1.5rem;
+}
+
+
+/* Progreso juostos – nauja išvaizda */
+.progress {
+  height: 14px;
+  border-radius: 999px;
+  background: #1a1d23;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progress .progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #c50707, #d80b0b);
+  box-shadow: 0 0 12px rgba(192, 5, 5, 0.7);
+}
+
+/* Procentų tekstas šalia juostos */
+.skill-item .skill-header .percent {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* "Į viršų" mygtukas */
+.scroll-top {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  transition: background 0.2s ease, border-color 0.2s ease,
+              transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.scroll-top i {
+  font-size: 1.9rem;
+  color: var(--accent-color);
+}
+
+.scroll-top:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 184, 148, 0.7);
+}
+
+.scroll-top:hover i {
+  color: #0b0c10;
+}
+
+.scroll-top:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Bendri nustatymai (nekabinam prie meniu ul) */
+.custom-bullet-list,
+.custom-number-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Nenumeruotas sąrašas su pseudo-elementais */
+.custom-bullet-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-bullet-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 0.55rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 0.2rem;
+  background: radial-gradient(circle at 30% 30%, #ffffff, var(--accent-color));
+  box-shadow: 0 0 8px rgba(0, 184, 148, 0.7);
+}
+
+/* Nested UL viduje – kitas stilius */
+.custom-bullet-list ul {
+  list-style: none;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding-left: 1.4rem;
+}
+
+.custom-bullet-list ul li {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.custom-bullet-list ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0.4rem;
+  color: #dfb837;
+}
+
+/* Numeruotas sąrašas su CSS counteriais */
+.custom-number-list {
+  counter-reset: custom-counter;
+}
+
+.custom-number-list li {
+  counter-increment: custom-counter;
+  position: relative;
+  padding-left: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-number-list li::before {
+  content: counter(custom-counter) ".";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Šiek tiek mažesnis tekstas sąrašuose */
+.custom-bullet-list li,
+.custom-number-list li {
+  font-size: 0.98rem;
+}
+
+
+.services-table-wrapper {
+  margin-top: 2.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+.services-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0f1116;
+}
+
+.services-pricing-table th,
+.services-pricing-table td {
+  padding: 0.9rem 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.96rem;
+}
+
+/* Header row */
+.services-pricing-table thead th {
+  background: linear-gradient(90deg, #00b894, #00cec9);
+  color: #0b0c10;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Zebra stilius */
+.services-pricing-table tbody tr:nth-child(odd) {
+  background: #151821;
+}
+
+.services-pricing-table tbody tr:nth-child(even) {
+  background: #101218;
+}
+
+/* Hover efektas */
+.services-pricing-table tbody tr:hover {
+  background: #222831;
+}
+
+/* Mažiems ekranams */
+@media (max-width: 767.98px) {
+  .services-pricing-table th,
+  .services-pricing-table td {
+    padding: 0.7rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Fancy font tik apie-mane kortelei */
+
+.content-wrapper h3,
+.content-wrapper .role,
+.bio-section,
+.bio-section p,
+.bio-section h2,
+.bio-section h4,
+.bio-section .custom-bullet-list li,
+.bio-section .custom-number-list li {
+  font-family: "Raleway", "Mulish", "Segoe UI", sans-serif !important;
+}
+
+/* papildomas “fancy” pojūtis */
+
+.content-wrapper h3 {
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content-wrapper .role {
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffeaa7;
+}
+
+.bio-section .section-tag {
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #55efc4;
+}
+
+.bio-section h2,
+.bio-section h4 {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@keyframes social-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(255, 77, 79, 0);
+    transform: translateY(0);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(255, 77, 79, 0.65);
+    transform: translateY(-2px);
+  }
+}
+
+.hero .social-links a {
+  animation: social-glow 2.6s ease-in-out infinite;
+}
+
+/* 2) Pavadinimo „Craftivo“ švytėjimas poraštėje */
+@keyframes footer-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 0 rgba(255, 77, 79, 0);
+    letter-spacing: 1px;
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(255, 77, 79, 0.9);
+    letter-spacing: 2px;
+  }
+}
+
+.footer .sitename {
+  animation: footer-glow 3.2s ease-in-out infinite;
+}
+
+/* 
+   Reduced motion support
+*/
+@media (prefers-reduced-motion: reduce) {
+
+  /* išjungiam savo animacijas */
+  .hero .social-links a,
+  .footer .sitename {
+    animation: none !important;
+  }
+
+  /* išjungiam ir preloader sukimąsi */
+  #preloader:before {
+    animation: none !important;
+  }
+}
+
+@keyframes services-gradient-move {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Taikomas tik Paslaugų sekcijai */
+section#services,
+.services.section {
+  position: relative;
+  background-image: linear-gradient(120deg, #020617, #00b894, #3b82f6);
+  background-size: 220% 220%;
+  animation: services-gradient-move 20s ease-in-out infinite;
+}
+
+/* Lengvas tamsus overlay, kad tekstas gerai matytųsi */
+section#services::before,
+.services.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0,0,0,0.4), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(0,0,0,0.55), transparent 60%);
+  pointer-events: none;
+}
+
+/* 
+   figūros apie About sekciją
+    */
+
+.about.section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* figūrų sluoksnis */
+.about-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* kad turinys būtų virš figūrų */
+.about .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-shapes .shape {
+  position: absolute;
+  opacity: 0.18;
+}
+
+/* Animacijos */
+@keyframes float-circle {
+  0%   { transform: translate3d(0,0,0) scale(0.9); }
+  50%  { transform: translate3d(60px,80px,0) scale(1.2); }
+  100% { transform: translate3d(0,0,0) scale(0.9); }
+}
+
+@keyframes float-diagonal {
+  0%   { transform: translate3d(0,10px,0) rotate(0deg); }
+  50%  { transform: translate3d(-40px,-40px,0) rotate(180deg) scale(1.1); }
+  100% { transform: translate3d(0,10px,0) rotate(360deg); }
+}
+
+@keyframes float-small-dot {
+  0%   { transform: translate3d(0,0,0); }
+  50%  { transform: translate3d(0,-25px,0); }
+  100% { transform: translate3d(0,0,0); }
+}
+
+/* Konkrečios figūros */
+
+.about-shapes .shape-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #00b894);
+  top: -40px;
+  left: -60px;
+  animation: float-circle 26s ease-in-out infinite;
+}
+
+.about-shapes .shape-diamond {
+  width: 140px;
+  height: 140px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.7), rgba(15,23,42,0.9));
+  bottom: -60px;
+  right: -40px;
+  transform: rotate(35deg);
+  animation: float-diagonal 30s linear infinite;
+}
+
+.about-shapes .shape-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  top: 45%;
+  right: 25%;
+  animation: float-small-dot 12s ease-in-out infinite;
+}
+
+/* ================================
+   Reduced motion – išjungiam naujas animacijas
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+
+  /* gradientas */
+  section#services,
+  .services.section {
+    animation: none !important;
+  }
+
+  /* figūros */
+  .about-shapes .shape {
+    animation: none !important;
+  }
+}
+
+/* --- Stronger & faster About-shapes animation override --- */
+
+.about-shapes .shape {
+  opacity: 0.4; 
+}
+
+/* greitesnis judėjimas */
+.about-shapes .shape-circle {
+  animation: float-circle 10s ease-in-out infinite;
+}
+
+.about-shapes .shape-diamond {
+  animation: float-diagonal 12s linear infinite;
+}
+
+.about-shapes .shape-dot {
+  animation: float-small-dot 6s ease-in-out infinite;
+}
